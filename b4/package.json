@@ -1,0 +1,24 @@
+{
+  "name": "b4",
+  "version": "0.1.0",
+  "description": "B4, The Better Book Bundle Builder.",
+  "author": "Your Name <you@yoursite.com> (http://yoursite.com/path)",
+  "scripts": {
+    "start": "node ./server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "connect-redis": "^3.0.0",
+    "cookie-parser": "^1.4.1",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "morgan": "^1.7.0",
+    "npmlog": "2.0.3",
+    "passport": "^0.3.2",
+    "passport-google-oauth": "^1.0.0",
+    "q": "^1.4.1",
+    "redis": "^2.6.0-2",
+    "request": "^2.72.0",
+    "serve-static": "^1.10.2"
+  }
+}

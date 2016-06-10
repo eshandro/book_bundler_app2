@@ -1,0 +1,3 @@
+Google OAuth:
+Client ID: 281349479660-c24p09s7v86133lvuocjn3fma611rttr.apps.googleusercontent.com
+Client Secret: LMvo1O_yz23Ck6VCLXB1kX0-
