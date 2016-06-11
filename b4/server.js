@@ -132,6 +132,7 @@ app.get('/api/user', authed, function(req, res){
 
 app.get('/api/user/bundles', authed, function(req, res) {
   var userURL = config.b4db + encodeURIComponent(req.user.id);
+  // console.log('userURL ', userURL);
   request(userURL, function(err, couchRes, body) {
     if (err) {
       res.status(502).json( { error: "bad_gateway", reason: err.code });

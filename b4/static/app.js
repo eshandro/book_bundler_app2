@@ -52,6 +52,7 @@ var
     $('.alert-danger').fadeIn().find('.message').text(err);
   },
   
+  // Show correct view and change URL to add #
   showView = function(selected) {
     window.location.hash = '#' + selected;
     $('.view').hide().filter('#' + selected + '-view').show();
@@ -77,6 +78,7 @@ $('script[type="text/x-handlebars-template"]').each(function() {
   templates[name] = Handlebars.compile($(this).html());
 });
 
+// On hashchange event show the correct view by calling showView() passing the #
 $(window).on('hashchange', function(event){
   var view = (window.location.hash || '').replace(/^#/, '');
   if ($('#' + view + '-view').length) {
@@ -140,13 +142,13 @@ $('.find-book').submit(function(event) {
   var
     $form = $(this),
     field = $form.find('[name="field"]').val(),
-    q = $(this).find('.search').val();
-  
+    q = $(this).find('.search.tt-input').val();
   $.ajax({
     url: '/api/search/book/by_' + field + '?q=' + encodeURIComponent(q),
     accepts: 'application/json'
   })
   .then(function(data, status, xhr) {
+    console.log("data",data);
     $('.books-results').html(templates['list-books']({ books: data }));
   }, showErr);
   
